@@ -2,7 +2,7 @@ package alla.jobmanagerserver.resource;
 
 import alla.jobmanagerserver.model.Response;
 import alla.jobmanagerserver.model.User;
-import alla.jobmanagerserver.service.UserServiceImpl;
+import alla.jobmanagerserver.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,9 +16,9 @@ import static org.springframework.http.HttpStatus.OK;
 @RestController
 @RequestMapping("/user")
 public class UserResource {
-    private final UserServiceImpl userService;
+    private final UserService userService;
 
-    public UserResource(UserServiceImpl userService) {
+    public UserResource(UserService userService) {
         this.userService = userService;
     }
 

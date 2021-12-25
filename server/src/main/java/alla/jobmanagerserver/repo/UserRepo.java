@@ -1,28 +1,21 @@
 package alla.jobmanagerserver.repo;
 
 import alla.jobmanagerserver.model.User;
-import alla.jobmanagerserver.service.UserService;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Repository;
-import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 
-@Service
+@Repository
 public class UserRepo {
-    private List<User> users = new ArrayList<>();
+    private final List<User> users = new ArrayList<>();
     private int genUserId = 4;
     {
         users.add(new User(1, "A", "Big A"));
         users.add(new User(2, "B", "Big B"));
         users.add(new User(3, "c", "Small c"));
-    }
-
-    public UserRepo() {
-        System.out.println("create");
     }
 
     public User create(User user) {

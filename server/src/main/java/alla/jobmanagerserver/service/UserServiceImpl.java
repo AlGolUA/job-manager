@@ -13,7 +13,7 @@ import java.util.Collection;
 @Transactional
 public class UserServiceImpl implements UserService{
     private final UserRepo userRepo;
-    private Logger log = LoggerFactory.getLogger(UserServiceImpl.class);
+    private final Logger log = LoggerFactory.getLogger(UserServiceImpl.class);
 
     public UserServiceImpl(UserRepo userRepo) {
         this.userRepo = userRepo;
@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public Collection<User> list(int limit) {
-        log.info("Fethcing all users");
+        log.info("Fetching all users");
         return userRepo.list(limit);
     }
 

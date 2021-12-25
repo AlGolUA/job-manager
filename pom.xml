@@ -7,11 +7,16 @@
     <groupId>alla</groupId>
     <artifactId>job-manager</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
+
+    <modules>
+        <module>server</module>
+    </modules>
 
     <dependencyManagement>
         <dependencies>
@@ -32,4 +37,15 @@
         </dependencies>
     </dependencyManagement>
 
+<!--    <build>-->
+<!--        <resources>-->
+<!--            <resource>-->
+<!--                <directory>server/src/main/frontend</directory>-->
+<!--                <targetPath>static1/</targetPath>-->
+<!--            </resource>-->
+<!--        </resources>-->
+
+<!--    </build>-->
+
 </project>
+
