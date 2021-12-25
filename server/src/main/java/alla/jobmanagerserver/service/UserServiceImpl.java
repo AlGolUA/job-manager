@@ -2,19 +2,22 @@ package alla.jobmanagerserver.service;
 
 import alla.jobmanagerserver.model.User;
 import alla.jobmanagerserver.repo.UserRepo;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.Collection;
 
 @Service
-@RequiredArgsConstructor
 @Transactional
-@Slf4j
 public class UserServiceImpl implements UserService{
     private final UserRepo userRepo;
+    private Logger log = LoggerFactory.getLogger(UserServiceImpl.class);
+
+    public UserServiceImpl(UserRepo userRepo) {
+        this.userRepo = userRepo;
+    }
 
     @Override
     public User create(User user) {
