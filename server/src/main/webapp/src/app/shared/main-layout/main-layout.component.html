@@ -1,0 +1,15 @@
+<nav class="navbar bg-dark">
+  <ul>Job Farm</ul>
+  <ul>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/admin']">Admin</a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/worker']">Worker</a>
+    </li>
+    <li routerLinkActive="active">
+      <a [routerLink]="['/org']">Organization</a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
