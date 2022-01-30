@@ -5,6 +5,9 @@ public class User {
     private String login;
     private String name;
 
+    public User() {
+    }
+
     public User(Integer id, String login, String name) {
         this.id = id;
         this.login = login;

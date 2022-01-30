@@ -10,6 +10,7 @@ import { MainPageOrgComponent } from './main-page-org/main-page-org.component';
 import { JobPageComponent } from './job-page/job-page.component';
 import { ProfilePageComponent } from './shared/profile-page/profile-page.component';
 import { MainPageComponent } from './shared/main-page/main-page.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MainPageComponent } from './shared/main-page/main-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
